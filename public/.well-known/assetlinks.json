@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.todoagro.agrocarteiraapp",
+      "sha256_cert_fingerprints": [
+        "2E:0B:1C:1E:05:0F:76:86:61:5F:3A:8F:1C:8A:9F:50:E4:33:3C:77:40:E6:BC:BB:2C:E7:09:39:B4:07:75:C0"
+      ]
+    }
+  }
+]
