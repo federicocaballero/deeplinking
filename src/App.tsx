@@ -1,6 +1,4 @@
-import React from "react";
 import { Link } from "react-router-dom";
-import viteLogo from "./assets/react.svg";
 
 function App() {
   return (
