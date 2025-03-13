@@ -24,7 +24,7 @@ function App() {
         </li>
         <li>
           {/* Enlace usando el scheme personalizado */}
-          <a href="myapp://deposit-money" target="_blank">
+          <a href="myapp://(deposit-money)" target="_blank">
             Abrir "Agregar dinero" en agrocarteira
           </a>
         </li>
