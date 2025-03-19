@@ -24,14 +24,17 @@ function App() {
       <p>Enlaces de prueba para deep linking:</p>
       <ul>
         <li>
-          <a href="myapp://(app)/home/blocked-balance" onClick={handleClick}>
+          <a
+            href="AgroCarteiraApp://(app)/home/blocked-balance"
+            onClick={handleClick}
+          >
             Abrir blockedBalance en la app utilizando etiqueta &lt; a &gt;
             nativa
           </a>
         </li>
         <li>
           <Link
-            href="myapp://(app)/home/blocked-balance"
+            href="AgroCarteiraApp://(app)/home/blocked-balance"
             onClick={handleClick}
             underline="none"
           >
