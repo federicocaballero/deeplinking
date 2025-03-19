@@ -6,7 +6,7 @@ function App() {
   ) => {
     event.preventDefault();
 
-    const appLink = "agrocarteiraapp://(home)/";
+    const appLink = "agrocarteiraapp://(app)/home";
     const webLink = "https://dev.agrocarteira.com.br";
     let timeout: ReturnType<typeof setTimeout> | undefined = undefined;
 
