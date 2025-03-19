@@ -6,7 +6,7 @@ function App() {
   ) => {
     event.preventDefault();
 
-    const appLink = "AgroCarteiraApp://(app)/home/blocked-balance";
+    const appLink = "myapp://(app)/home/blocked-balance";
     const webLink = "https://dev.agrocarteira.com.br";
     let timeout: ReturnType<typeof setTimeout> | undefined = undefined;
 
@@ -34,17 +34,14 @@ function App() {
       <p>Enlaces de prueba para deep linking:</p>
       <ul>
         <li>
-          <a
-            href="AgroCarteiraApp://(app)/home/blocked-balance"
-            onClick={handleClick}
-          >
-            Abrir blockedBalance en la app utilizando etiqueta &lt; a &gt; nueva
-            forma de redireccionamiento
+          <a href="myapp://(app)/home/blocked-balance" onClick={handleClick}>
+            Abrir blockedBalance en la app utilizando etiqueta &lt; a &gt;
+            reemplazado schema myapp
           </a>
         </li>
         <li>
           <Link
-            href="AgroCarteiraApp://(app)/home/blocked-balance"
+            href="myapp://(app)/home/blocked-balance"
             onClick={handleClick}
             underline="none"
           >
