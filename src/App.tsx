@@ -7,15 +7,15 @@ function App() {
     event.preventDefault();
 
     const appLink = "myapp://(deposit-money)/";
-    const webLink = "dev.agrocarteira.com.br";
+    const webLink = "https://dev.agrocarteira.com.br";
 
     // Intenta abrir la app
     window.location.href = appLink;
 
-    // Si la app no está instalada, redirige a la web después de 1.5 segundos
+    // Si la app no está instalada, redirige a la web después de 1 segundo
     setTimeout(() => {
       window.location.href = webLink;
-    }, 1500);
+    }, 1000);
   };
 
   return (
@@ -24,11 +24,7 @@ function App() {
       <p>Enlaces de prueba para deep linking:</p>
       <ul>
         <li>
-          <a
-            href="myapp://(app)/home/blocked-balance"
-            // onclick="window.location.href='https://midominio.com/(app)/home';
-            // setTimeout(() => { window.location.href = 'https://midominio.com/(app)/home'; }, 1500);"
-          >
+          <a href="myapp://(app)/home/blocked-balance" onClick={handleClick}>
             Abrir blockedBalance en la app
           </a>
         </li>
