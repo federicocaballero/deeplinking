@@ -18,18 +18,6 @@ function App() {
     }, 1000);
   };
 
-  // const handleClickEtiquetaHTML = (
-  //   event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
-  // ) => {
-  //   event.preventDefault();
-
-  //   const webLink = "https://dev.agrocarteira.com.br";
-  //   // Si la app no está instalada, redirige a la web después de 1 segundo
-  //   setTimeout(() => {
-  //     window.location.href = webLink;
-  //   }, 1000);
-  // };
-
   return (
     <div>
       <h5>Deeplinking</h5>
@@ -38,7 +26,7 @@ function App() {
         <li>
           <a
             href="AgroCarteiraApp://(app)/home/blocked-balance"
-            // onClick={handleClickEtiquetaHTML}
+            onClick={handleClick}
           >
             Abrir blockedBalance en la app utilizando etiqueta &lt; a &gt;
             nativa sin handleClick
@@ -46,7 +34,7 @@ function App() {
         </li>
         <li>
           <Link
-            // href="AgroCarteiraApp://(app)/home/blocked-balance"
+            href="AgroCarteiraApp://(app)/home/blocked-balance"
             onClick={handleClick}
             underline="none"
           >
