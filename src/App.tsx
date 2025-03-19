@@ -1,9 +1,20 @@
 import { Link } from "@mui/material";
 
 function App() {
+  // Detecta si el usuario está en un dispositivo móvil
+  const isMobile =
+    /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    );
+
   const handleClick = (
     event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
   ) => {
+    if (isMobile) {
+      console.log("Estás en un dispositivo móvil");
+    } else {
+      console.log("Estás en un escritorio");
+    }
     event.preventDefault();
 
     const appLink = "myapp://(app)/home";
