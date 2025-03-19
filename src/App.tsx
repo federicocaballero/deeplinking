@@ -25,7 +25,7 @@ function App() {
       <ul>
         <li>
           <a
-            href="AgroCarteiraApp://(app)/home/blocked-balance"
+            // href="AgroCarteiraApp://(app)/home/blocked-balance"
             onClick={handleClick}
           >
             Abrir blockedBalance en la app utilizando etiqueta &lt; a &gt;
@@ -34,7 +34,7 @@ function App() {
         </li>
         <li>
           <Link
-            href="AgroCarteiraApp://(app)/home/blocked-balance"
+            // href="AgroCarteiraApp://(app)/home/blocked-balance"
             onClick={handleClick}
             underline="none"
           >
