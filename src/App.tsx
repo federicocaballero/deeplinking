@@ -25,7 +25,8 @@ function App() {
       <ul>
         <li>
           <a href="myapp://(app)/home/blocked-balance" onClick={handleClick}>
-            Abrir blockedBalance en la app
+            Abrir blockedBalance en la app utilizando etiqueta &lt; a &gt;
+            nativa
           </a>
         </li>
         <li>
@@ -34,7 +35,7 @@ function App() {
             onClick={handleClick}
             underline="none"
           >
-            Abrir en la App
+            Abrir en la App utilizando componente &lt;Link&gt; de MUI
           </Link>
         </li>
       </ul>
