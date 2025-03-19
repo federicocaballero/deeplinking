@@ -6,7 +6,7 @@ function App() {
   ) => {
     event.preventDefault();
 
-    const appLink = "AgroCarteiraApp://(deposit-money)/";
+    const appLink = "myapp://(deposit-money)/";
     const webLink = "https://dev.agrocarteira.com.br";
     let timeout: ReturnType<typeof setTimeout> | undefined = undefined;
 
