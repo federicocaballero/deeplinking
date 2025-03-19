@@ -29,7 +29,7 @@ function App() {
             onClick={handleClick}
           >
             Abrir blockedBalance en la app utilizando etiqueta &lt; a &gt;
-            nativa sin handleClick
+            nativa con handleClick y href
           </a>
         </li>
         <li>
