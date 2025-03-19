@@ -6,7 +6,7 @@ function App() {
   ) => {
     event.preventDefault();
 
-    const appLink = "agrocarteiraapp://(deposit-money)/";
+    const appLink = "agrocarteiraapp://(home)/";
     const webLink = "https://dev.agrocarteira.com.br";
     let timeout: ReturnType<typeof setTimeout> | undefined = undefined;
 
@@ -35,8 +35,7 @@ function App() {
       <ul>
         <li>
           <a href="#" onClick={handleClick}>
-            Abrir blockedBalance en la app utilizando etiqueta &lt; a &gt;
-            reemplazado schema myapp
+            Abrir app utilizando etiqueta &lt; a &gt;
           </a>
         </li>
         <li>
