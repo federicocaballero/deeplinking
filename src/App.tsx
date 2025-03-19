@@ -1,38 +1,45 @@
-import { Link } from "react-router-dom";
+import { Link } from "@mui/material";
 
 function App() {
+  const handleClick = (
+    event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+  ) => {
+    event.preventDefault();
+
+    const appLink = "myapp://(app)/home";
+    const webLink = "https://midominio.com/(app)/home";
+
+    // Intenta abrir la app
+    window.location.href = appLink;
+
+    // Si la app no está instalada, redirige a la web después de 1.5 segundos
+    setTimeout(() => {
+      window.location.href = webLink;
+    }, 1500);
+  };
+
   return (
     <div>
       <h5>Deeplinking</h5>
       <p>Enlaces de prueba para deep linking:</p>
       <ul>
         <li>
-          {/* Enlace usando el scheme personalizado */}
-          <a href="myapp://home" target="_blank">
-            Abrir Home con esquema personalizado
+          <a
+            href="myapp://(app)/home/blocked-balance"
+            // onclick="window.location.href='https://midominio.com/(app)/home';
+            // setTimeout(() => { window.location.href = 'https://midominio.com/(app)/home'; }, 1500);"
+          >
+            Abrir blockedBalance en la app
           </a>
         </li>
         <li>
-          {/* Enlace a la ruta "/profile" de tu SPA */}
-          <Link to="/profile">Ir a la página de Perfil (SPA)</Link>
-        </li>
-        <li>
-          {/* Enlace a la ruta "/profile" de tu SPA */}
-          <Link to="/products">
-            Ir a la página de productos usando LINK (SPA)
+          <Link
+            href="myapp://(app)/home/blocked-balance"
+            onClick={handleClick}
+            underline="none"
+          >
+            Abrir en la App
           </Link>
-        </li>
-        <li>
-          {/* Enlace usando el scheme personalizado */}
-          <a href="myapp://(deposit-money)" target="_blank">
-            Abrir "Agregar dinero" en agrocarteira
-          </a>
-        </li>
-        <li>
-          {/* Enlace usando el scheme personalizado */}
-          <a href="myapp://profile" target="_blank">
-            Abrir Profile con esquema personalizado
-          </a>
         </li>
       </ul>
     </div>
