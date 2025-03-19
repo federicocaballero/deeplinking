@@ -6,8 +6,8 @@ function App() {
   ) => {
     event.preventDefault();
 
-    const appLink = "myapp://(app)/home";
-    const webLink = "https://midominio.com/(app)/home";
+    const appLink = "myapp://(deposit-money)/";
+    const webLink = "dev.agrocarteira.com.br";
 
     // Intenta abrir la app
     window.location.href = appLink;
