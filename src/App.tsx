@@ -6,14 +6,24 @@ function App() {
   ) => {
     event.preventDefault();
 
-    const appLink = "AgroCarteiraApp://(deposit-money)/";
+    const appLink = "AgroCarteiraApp://(app)/home/blocked-balance";
     const webLink = "https://dev.agrocarteira.com.br";
+    let timeout: NodeJS.Timeout;
+
+    // Escucha cambios en la visibilidad del documento
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        clearTimeout(timeout); // Si el usuario salió, se abrió la app, así que cancelamos el fallback
+      }
+    };
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
 
     // Intenta abrir la app
     window.location.href = appLink;
 
     // Si la app no está instalada, redirige a la web después de 1 segundo
-    setTimeout(() => {
+    timeout = setTimeout(() => {
       window.location.href = webLink;
     }, 1000);
   };
@@ -28,8 +38,8 @@ function App() {
             href="AgroCarteiraApp://(app)/home/blocked-balance"
             onClick={handleClick}
           >
-            Abrir blockedBalance en la app utilizando etiqueta &lt; a &gt;
-            nativa con handleClick y href
+            Abrir blockedBalance en la app utilizando etiqueta &lt; a &gt; nueva
+            forma de redireccionamiento
           </a>
         </li>
         <li>
