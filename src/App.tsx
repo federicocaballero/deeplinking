@@ -6,7 +6,7 @@ function App() {
   ) => {
     event.preventDefault();
 
-    const appLink = "myapp://(app)/home/blocked-balance";
+    const appLink = "myapp://(deposit-money)/";
     const webLink = "https://dev.agrocarteira.com.br";
     let timeout: ReturnType<typeof setTimeout> | undefined = undefined;
 
@@ -34,17 +34,13 @@ function App() {
       <p>Enlaces de prueba para deep linking:</p>
       <ul>
         <li>
-          <a href="myapp://(app)/home/blocked-balance" onClick={handleClick}>
+          <a href="#" onClick={handleClick}>
             Abrir blockedBalance en la app utilizando etiqueta &lt; a &gt;
             reemplazado schema myapp
           </a>
         </li>
         <li>
-          <Link
-            href="myapp://(app)/home/blocked-balance"
-            onClick={handleClick}
-            underline="none"
-          >
+          <Link href="#" onClick={handleClick} underline="none">
             Abrir en la App utilizando componente &lt;Link&gt; de MUI
           </Link>
         </li>
