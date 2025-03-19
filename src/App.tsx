@@ -6,7 +6,7 @@ function App() {
   ) => {
     event.preventDefault();
 
-    const appLink = "myapp://(deposit-money)/";
+    const appLink = "AgroCarteiraApp://(deposit-money)/";
     const webLink = "https://dev.agrocarteira.com.br";
 
     // Intenta abrir la app
