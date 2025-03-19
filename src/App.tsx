@@ -8,7 +8,7 @@ function App() {
 
     const appLink = "AgroCarteiraApp://(app)/home/blocked-balance";
     const webLink = "https://dev.agrocarteira.com.br";
-    let timeout: NodeJS.Timeout;
+    let timeout: ReturnType<typeof setTimeout> | undefined = undefined;
 
     // Escucha cambios en la visibilidad del documento
     const handleVisibilityChange = () => {
